@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refusal-bench"
+version = "0.1.0"
+description = "A false-refusal benchmark for coding models: how often do they refuse legitimate tasks?"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["llm", "benchmark", "refusal", "uncensored", "evaluation", "coding"]
+authors = [{ name = "Tartarus AI", email = "team@tartarusai.dev" }]
+
+[project.urls]
+Homepage = "https://tartarusai.dev"
+Source = "https://github.com/TartarusAIDev/refusal-bench"
+
+[project.scripts]
+refusal-bench = "refusalbench.__main__:main"
+
+[tool.setuptools]
+packages = ["refusalbench"]

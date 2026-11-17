@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m compileall refusalbench
+      - name: classifier smoke test
+        run: |
+          python - <<'PY'
+          from refusalbench.classify import classify
+          assert classify("I can't help with that.").refused is True
+          assert classify("Sure, here you go:\n```py\nprint(1)\n```").refused is False
+          assert classify("```\nI can't help\n```").refused is False
+          print("ok")
+          PY
