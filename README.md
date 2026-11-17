@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://tartarusai.dev/?utm_source=github&utm_medium=readme&utm_campaign=refusal-bench&utm_content=banner">
+    <img src="assets/banner.svg" alt="refusal-bench — Measure a model's false-refusal rate" width="100%">
+  </a>
+</p>
+
 # refusal-bench
 
 **How often does a coding model refuse legitimate work?**
@@ -80,4 +86,4 @@ makes it legitimate.
 
 ## License
 
-MIT. Built by [Tartarus AI](https://tartarusai.dev).
+MIT. Built by [Tartarus AI](https://tartarusai.dev/?utm_source=github&utm_medium=readme&utm_campaign=refusal-bench&utm_content=body).
